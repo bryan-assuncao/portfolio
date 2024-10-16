@@ -1,0 +1,537 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    --main-color: #1e90ff;
+    --text-color: #ffffff;
+    --bg-color-01: #000000;
+    --bg-color-02: #161616;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+}
+
+html {
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+}
+
+body {
+    background-color: var(--bg-color-01);
+    color: var(--text-color)
+}
+
+header {
+    position: fixed;
+    background-color: var(--bg-color-02);
+    width: 100%;
+    padding: 1.1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 1.7rem;
+    color: var(--main-color);
+    font-weight: 600;
+    cursor: default;
+}
+
+.nav-responsive {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1rem;
+}
+
+.nav a, .nav-responsive a{
+    font-size: 1.2rem;
+    color: var(--text-color);
+    padding: 0.5rem 1rem;
+    transition: 0.4s;
+}
+
+.nav a:hover{
+    color: var(--main-color)
+}
+
+section {
+    min-height: 100vh;
+    padding: 6rem 6rem 2rem;   
+}
+
+span {
+    color: var(--main-color)
+ }
+
+.home, .about {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.home-img img, .about-img img {
+    width: 100%;
+}
+
+.home-img {
+    border-right: solid 0.6rem; 
+    border-bottom: solid 0.6rem; 
+    border-image: linear-gradient(135deg, transparent 50%, var(--main-color)) 1; 
+}
+
+.about-img {
+    border-left: solid 0.5rem; 
+    border-bottom: solid 0.5rem; 
+    border-image: linear-gradient(225deg, transparent 50%, var(--main-color)) 1; 
+}
+
+.about {
+    background-color: var(--bg-color-01);
+}
+
+.home-content, .about-content {
+    width: 45%;
+}
+
+.home-content h1, .about-content h1 {
+    font-weight: 700;
+    line-height: 3rem;
+    font-size: 2.7rem;
+    margin: 7px 0px;
+}
+
+.home-content h3, .about-content h3 {
+    font-weight: 600;
+    font-size: 1.6rem;
+}
+
+.home-content p, .about-content p {
+    margin-top: 0.5rem;
+    text-align: justify;
+}
+
+.portifolio h2 {
+    font-size: 2.2rem;
+    margin-bottom: 4rem;
+    text-align: center;
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.7rem 1.8rem;
+    background-color: var(--main-color);
+    border-radius: 2rem;
+    color: var(--bg-color-02);
+    font-weight: 600;
+    letter-spacing: 0.1rem;
+    transition: 0.3s ease;
+    margin-top: 1.2rem;
+}
+
+.btn:hover {
+    box-shadow: 0 0 0.3rem var(--main-color);
+    background-color: inherit;
+    color: var(--main-color);
+    cursor: pointer;
+}
+
+.portifolio {
+    background-color: var(--bg-color-02);
+    min-height: 75vh;
+}
+
+.portifolio-container {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: auto auto;
+    justify-items: center; /* Centraliza as imagens */
+}
+
+.portifolio-box {
+    position: relative;
+    border-radius: 0.6rem;
+    box-shadow: 0 0 0.6rem var(--bg-color-01);
+    overflow: hidden;
+    max-width: 100%; 
+}
+
+.portifolio-box img {
+    width: 100%; 
+    border-radius: 8px;
+    transition: transform 0.5s ease;
+}
+
+.portifolio-box:hover img {
+    transform: scale(1.1); 
+}
+
+.portifolio-layer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    opacity: 0; /* Invisível por padrão */
+    transition: opacity 0.5s ease; /* Suaviza a transição de opacidade */
+    padding: 0.4rem;
+    color: var(--text-color);
+    border-radius: 8px;
+}
+
+.portifolio-box:hover .portifolio-layer {
+    opacity: 1; /* Torna o layer visível no hover */
+}
+
+.portifolio-layer h4 {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+}
+
+.portifolio-layer p {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+.portifolio-layer a i {
+    font-size: 2rem;
+    color: var(--main-color);
+}
+
+.social-midia img {
+    width:3.5rem;
+}
+
+.social-midia a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    background: transparent;
+    border: solid 0.15rem var(--main-color);
+    border-radius: 50%;
+    font-size: 2rem;
+    color: var(--main-color);
+    margin: 1.8rem 0.5rem;
+    transform: 0.5s ease;
+}
+
+.social-midia a:hover {
+    background-color: var(--main-color);
+    color: var(--bg-color-02);
+    box-shadow: 0 0 0.3rem;
+}
+
+
+.contact {
+    background-color: var(--bg-color-02);
+    padding: 4rem 6rem;
+    color: var(--text-color);
+    text-align: center;
+    min-height: 30vh;
+}
+
+.contact h2 {
+    font-size: 2.2rem;
+    margin-bottom: 2rem;
+}
+
+.contact-container {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.contact-info {
+    margin: 1.5rem;
+}
+
+.contact-info h4 {
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+}
+
+.contact-info p {
+    font-size: 1.2rem;
+}
+
+footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--bg-color-01);
+    padding: 10px;
+}
+
+.menu-hamburguer {
+    display: none;
+    cursor: pointer;
+}
+
+.bar1, .bar2, .bar3 {
+    width: 2rem;
+    height: 0.3rem;
+    background-color: var(--text-color);
+    margin: 0.4rem 0;
+    transition: 0.3s ease;
+}
+
+.change .bar1 {
+    transform: translate(0 0.65rem) rotate(-45deg);
+}
+
+.change .bar2 {
+    opacity: 0;
+}
+
+.change .bar3 {
+    transform: translate(0 -0.65rem) rotate(45deg);
+}
+
+.nav-responsive.active {
+    display: block; /* Exibe o menu responsivo */
+}
+
+.nav-responsive {
+    display: none; /* Esconde o menu por padrão */
+    background-color: var(--bg-color-02); /* Adiciona cor de fundo */
+    padding: 1rem; /* Adiciona padding */
+}
+
+.nav-responsive a {
+    display: block; /* Torna cada link um bloco para melhor clique */
+    padding: 1rem; /* Adiciona espaço ao redor do link */
+    border-bottom: 1px solid var(--color-01); /* Adiciona uma borda inferior */
+}
+
+.nav-responsive.active {
+    display: block; /* Torna o menu visível quando ativo */
+}
+
+.contact {
+    background-color: var(--bg-color-02);
+    padding: 4rem 2rem; /* Ajuste o padding para que não fique muito largo em dispositivos móveis */
+    color: var(--text-color);
+    text-align: center;
+    min-height: 30vh;
+}
+
+.contact h2 {
+    font-size: 2.2rem;
+    margin-bottom: 2rem;
+}
+
+.contact-container {
+    display: flex;
+    flex-direction: column; /* Mude para coluna em telas pequenas */
+    align-items: center; /* Centraliza os itens */
+}
+
+.contact-info {
+    margin: 1.5rem;
+    text-align: center; /* Centraliza o texto */
+}
+
+.contact-info p {
+    font-size: 1.2rem;
+}
+
+/* Estilos padrão para telas grandes (desktop) */
+@media (min-width: 1200px) {
+    .home-img, .about-img {
+        max-width: 25%;
+    }
+
+    .home-content h1 {
+        font-size: 2.7rem;
+    }
+
+    .home-content h3 {
+        font-size: 2rem;
+    }
+
+    .portifolio-container {
+        grid-template-columns: auto auto auto;
+    }
+}
+
+/* Estilos para telas de tablet (mínimo de 992px) */
+@media (min-width: 992px) {
+    .home-img, .about-img {
+        max-width: 35%;
+    }
+    
+    
+}
+
+/* Estilos para telas de tablet menores (mínimo de 768px) */
+@media (min-width: 768px) {
+    .menu-hamburguer {
+        display: none;
+    }
+
+    
+    .nav {
+        display: block;
+    }
+
+    .nav-responsive, .nav-responsive a {
+        display: none;
+    }
+
+    .home, .about {
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+
+    .home-img, .about-img {
+        max-width: 35%;
+    }
+
+    .home-content, .about-content {
+        width: 50%;
+    }
+
+    .portifolio-container {
+        grid-template-columns: auto auto auto;
+    }
+
+    .contact-container {
+        flex-direction: column;
+        align-items: center;
+        padding: 0 1rem; 
+    }
+
+    .contact-info {
+        text-align: center;
+        width: 100%; 
+    }
+}
+
+/* Estilos para telas de celular (máximo de 576px) */
+@media (max-width: 576px) {
+    .portifolio-container {
+        grid-template-columns: auto;
+    }
+    
+    .menu-hamburguer {
+        display: block;
+    }
+
+    .nav {
+        display: none;
+    }
+
+    .nav-responsive a {
+        display: block;
+        font-size: 1rem;
+        margin: 0.5rem 0;
+    }
+
+    section {
+        padding: 6rem 2.5rem;
+    }
+
+    .home, .about {
+        flex-direction: column;
+        gap: 1.2rem;
+    }
+
+    .home-img, .about-img {
+        width: 88%;
+        height: 88%;
+        margin-top: 50px;
+    }
+
+    .home-content, .about-content {
+        width: 100%;
+    }
+
+    .home-content div {
+        align-items: center;
+    }
+
+    .home-content h1{
+        font-size: 1.5rem;
+        font-weight: 700;
+        line-height: 1.3;
+    }
+    .home-content p{
+        font-size: 0.6rem
+    }
+
+    .home-content h3{
+        font-size: 1rem;
+    }
+
+    .btn {
+        font-size: 0.5rem;
+    }
+
+    .container-btn {
+        text-align: center;
+    }
+
+    .logo {
+        font-size: 1.3rem;
+    }
+
+    .portifolio-layer p {
+        font-size: 0.7rem;
+    }
+
+    .portifolio h2 {
+        font-size: 1.3rem;
+    }
+
+    .portifolio-layer h4 {
+        font-size: 1rem;
+    }
+
+    .portifolio p {
+        font-size: 0.5rem;
+    }
+
+    .about h3 {
+        font-size: 1rem;
+        padding-bottom: 10px;
+    }
+
+    .about p {
+        font-size: 0.5rem;
+    }
+
+    .contact h2 {
+        font-size: 1.3rem;
+    }
+
+    .contact p {
+        font-size: 1rem;
+    }
+
+    .contact-info h4 {
+        font-size: 1rem;
+        margin-bottom: 0.5rem;
+    }
+
+    footer p {
+        font-size: 0.7rem;
+    }
+}
