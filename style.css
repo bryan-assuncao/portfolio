@@ -125,7 +125,7 @@ span {
 .home-content p,
 .about-content p {
   margin-top: 0.5rem;
-  text-align: justify;
+  text-align: start;
 }
 
 .portifolio h2 {
