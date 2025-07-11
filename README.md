@@ -2,7 +2,7 @@
 
 Este é o meu portfólio pessoal, onde compartilho informações sobre meus projetos e habilidades. O site foi desenvolvido para mostrar minha trajetória, destacar projetos em tecnologia e facilitar o contato com potenciais empregadores ou colaboradores.
 
-🖥️ **Acesse o portfólio aqui**: [bryan-assuncao.github.io/portifolio](https://bryan-assuncao.github.io/portifolio/)
+🖥️ **Acesse o portfólio aqui**: [bryan-assuncao.github.io/portifolio](https://bryan-assuncao.github.io/portfolio/)
 
 ## 🛠️ Tecnologias Utilizadas
 
